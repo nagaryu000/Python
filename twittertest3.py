@@ -7,22 +7,22 @@ import MeCab
 
 ### Constants                                                                                                                                                     
 oath_key_dict = {
-    "consumer_key": "qK0BBiDzeZqekFq5VzOpKoX0R",
-    "consumer_secret": "WpjvlWM4A2ed9ajZol5P2IT2yZsOnmItcRi4bxPTbbrWgvvQiz",
-    "access_token": "129074254-k6wpcnlxjIiWxVgcI9NhbgDG5K6rrp1iwKiv6AlW",
-    "access_token_secret": "pxh24zt3ob6W1gxHlKYKvmUMCicOuaeilAmdXRhpjE0O7"
+    "consumer_key": "your consumer_key",
+    "consumer_secret": "your consumer_secret",
+    "access_token": "your access_token",
+    "access_token_secret": "your access_token_secret"
 }
 
 ### Functions                                                                                                                                                     
 def main():
-    tweet_list = tweet_search("@7x3x7x3", oath_key_dict)
+    tweet_list = tweet_search("twitter_account", oath_key_dict)
     text = ""
     for dic in tweet_list:
         
         text += dic['text'] + "\n"
     
     print(text)
-    mecab = MeCab.Tagger("-Ochasen")
+    mecab = MeCab.Tagger("Twitter account you want search")
     mecab_parsed = mecab.parse(text)
     
     lines = mecab_parsed.split("\n")
