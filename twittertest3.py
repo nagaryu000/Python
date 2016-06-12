@@ -15,7 +15,7 @@ oath_key_dict = {
 
 ### Functions                                                                                                                                                     
 def main():
-    tweet_list = tweet_search("twitter_account", oath_key_dict)
+    tweet_list = tweet_search("-Ochasen", oath_key_dict)
     text = ""
     for dic in tweet_list:
         
